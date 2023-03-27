@@ -1,0 +1,59 @@
+is_global = true
+build_property.TargetFramework = net7.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MAUI_Assessment_One
+build_property.ProjectDir = C:\Users\manish.rajpurohit\Desktop\Projects\MAUI_Assessment_One\MAUI_Assessment_One\
+
+[C:/Users/manish.rajpurohit/Desktop/Projects/MAUI_Assessment_One/MAUI_Assessment_One/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUI_Assessment_One.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/manish.rajpurohit/Desktop/Projects/MAUI_Assessment_One/MAUI_Assessment_One/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUI_Assessment_One.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/manish.rajpurohit/Desktop/Projects/MAUI_Assessment_One/MAUI_Assessment_One/QuizgamePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUI_Assessment_One.QuizgamePage.xaml
+build_metadata.AdditionalFiles.TargetPath = QuizgamePage.xaml
+build_metadata.AdditionalFiles.RelativePath = QuizgamePage.xaml
+
+[C:/Users/manish.rajpurohit/Desktop/Projects/MAUI_Assessment_One/MAUI_Assessment_One/RegistrationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUI_Assessment_One.RegistrationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = RegistrationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = RegistrationPage.xaml
+
+[C:/Users/manish.rajpurohit/Desktop/Projects/MAUI_Assessment_One/MAUI_Assessment_One/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUI_Assessment_One.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/manish.rajpurohit/Desktop/Projects/MAUI_Assessment_One/MAUI_Assessment_One/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUI_Assessment_One.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/manish.rajpurohit/Desktop/Projects/MAUI_Assessment_One/MAUI_Assessment_One/ResultsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUI_Assessment_One.ResultsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ResultsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ResultsPage.xaml
+
+[C:/Users/manish.rajpurohit/Desktop/Projects/MAUI_Assessment_One/MAUI_Assessment_One/WelcomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUI_Assessment_One.WelcomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = WelcomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = WelcomePage.xaml

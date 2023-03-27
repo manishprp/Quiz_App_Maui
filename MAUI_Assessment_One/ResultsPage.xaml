@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_Assessment_One.ResultsPage"
+             BackgroundColor="#b0dbe8"
+             xmlns:viewModel="clr-namespace:MAUI_Assessment_One.ViewModel.ResultsViewModel"
+             Title="ResultsPage">
+    <NavigationPage.TitleView
+        >
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Label
+                VerticalOptions="CenterAndExpand"
+                TextColor="White"
+                FontSize="Large"
+                FontFamily="Homemade-Sausage"
+                Text="Quiz"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.BindingContext>
+        <viewModel:ResultsViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <VerticalStackLayout
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="CenterAndExpand"
+            Spacing="20">
+        <Image
+            WidthRequest="160"
+            HeightRequest="160"
+            Source="{Binding ImageSource}"/>
+        <Label
+            CharacterSpacing="3"
+            FontAttributes="Bold"
+            TextColor="#ff8355"
+            HorizontalOptions="Center"
+            FontFamily="Homemade-Sausage"
+            FontSize="40"
+            Text="{Binding Review}"/>
+        <Label
+            FontAttributes="Bold"
+            TextColor="#6798ef"
+            HorizontalOptions="Center"
+            FontFamily="Homemade-Sausage"
+            FontSize="35"
+            Text="{Binding NameOfPlayer}"/>
+            <Label
+            TextColor="#9e3cd0"
+            HorizontalOptions="Center"
+            FontFamily="christmas"
+            FontSize="38"
+                CharacterSpacing="2"
+            Text="{Binding Points}"/>
+        <Button
+            Margin="16"
+            CornerRadius="30"
+            BackgroundColor="#6899ef"
+            TextColor="White"
+            FontSize="30"
+            Command="{Binding ReplayCommand}"
+            FontFamily="Homemade-Sausage"
+            Text="Replay"/>
+        </VerticalStackLayout>
+    </StackLayout>
+   
+</ContentPage>

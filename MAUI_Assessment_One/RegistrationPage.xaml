@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#6899ef"
+             Shell.NavBarIsVisible="False"
+             Padding="16"
+             xmlns:viewModel="clr-namespace:MAUI_Assessment_One.ViewModel.RegisterViewModel"
+             x:Class="MAUI_Assessment_One.RegistrationPage">
+    
+
+    <ContentPage.BindingContext>
+        <viewModel:RegisterViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <VerticalStackLayout
+            Spacing="35"
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="FillAndExpand">
+            <Label
+                HorizontalOptions="Center"
+                FontAttributes="Bold"
+                FontSize="40"
+                FontFamily="Tiny-Angels"
+                Text="Quiz"/>
+            <Frame
+                CornerRadius="20"
+                BorderColor="White">
+                <VerticalStackLayout
+                    Spacing="25">
+                    <Entry
+                        FontFamily="Homemade-Sausage"
+                        Text="{Binding PlayerName}"
+                        PlaceholderColor="#d2d2d2"
+                        FontSize="25"
+                        Placeholder="Player name"/>
+                    <Button
+                        FontFamily="Homemade-Sausage"
+                        Command="{Binding SubmitPlayerNameCommand}"
+                        CornerRadius="30"
+                        FontSize="Large"
+                        TextColor="White"
+                        Text="Submit"
+                        BackgroundColor="#f28484"
+                        />
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+        
+    </StackLayout>
+
+</ContentPage>

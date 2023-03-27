@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_Assessment_One.WelcomePage"
+             Padding="25"
+             xmlns:viewModel="clr-namespace:MAUI_Assessment_One.ViewModel.WelcomeViewModel"
+             Shell.NavBarIsVisible="True"
+             BackgroundColor="White"
+             >
+    <NavigationPage.TitleView
+        >
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Label
+                VerticalOptions="CenterAndExpand"
+                TextColor="White"
+                FontSize="Large"
+                FontFamily="Homemade-Sausage"
+                Text="Quiz"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.BindingContext>
+        <viewModel:WelcomeViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+    <StackLayout
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand"
+        Spacing="15">
+        <Label
+            FontFamily="christmas"
+            FontAttributes="Bold"
+            FontSize="40"
+            TextColor="#5d9ea1"
+            Text="Welcome"/>
+        <Label
+            TextColor="#ff8252"
+            FontAttributes="Bold"
+            FontSize="45"
+            FontFamily="christmas"
+            Text="{Binding PlayerName}"/>
+       
+        <VerticalStackLayout
+            VerticalOptions="CenterAndExpand"
+            Spacing="20">
+            <Label
+            FontFamily="Homemade-Sausage"
+            Margin="0,30,0,10"
+            FontAttributes="Bold"
+            FontSize="25"
+            TextColor="#7965f0"
+            Text="Game Rules:"/>
+            <Grid
+            ColumnDefinitions="1*,9*">
+            <Label
+                FontFamily="Winkle-Regular"
+                FontSize="35"
+                VerticalOptions="Center"
+                TextColor="#136a6a"
+                Grid.Column="0"
+                Text="1."/>
+            <Label
+                FontFamily="Homemade-Sausage"
+                FontSize="20"
+                HorizontalOptions="Start"
+                TextColor="#f28e8e"
+                Grid.Column="1"
+                Text="For every right answer 10 points will be granted."/>
+        </Grid>
+        <Grid
+            ColumnDefinitions="1*,9*">
+            <Label
+                FontFamily="Winkle-Regular"
+                FontSize="35"
+                VerticalOptions="Center"
+                TextColor="#136a6a"
+                Grid.Column="0"
+                Text="2."/>
+            <Label
+                FontFamily="Homemade-Sausage"
+                FontSize="20"
+                HorizontalOptions="Start"
+                TextColor="#f28e8e"
+                Grid.Column="1"
+                Text="You will get 3 attempts to give right answer for each question."/>
+        </Grid>
+        <Grid
+            ColumnDefinitions="1*,9*">
+            <Label
+                FontFamily="Winkle-Regular"
+                FontSize="35"
+                VerticalOptions="Center"
+                TextColor="#136a6a"
+                Grid.Column="0"
+                Text="3."/>
+            <Label
+                FontFamily="Homemade-Sausage"
+               FontSize="20"
+                HorizontalOptions="Start"
+                TextColor="#f28e8e"
+                Grid.Column="1"
+                Text="For every wrong attempt 5 points will be deducted."/>
+        </Grid>
+        <Grid
+            ColumnDefinitions="1*,9*">
+            <Label
+                FontFamily="Winkle-Regular"
+                FontSize="35"
+                VerticalOptions="Center"
+                TextColor="#136a6a"
+                Grid.Column="0"
+                Text="4."/>
+            <Label
+                FontFamily="Homemade-Sausage"
+                FontSize="20"
+                HorizontalOptions="Start"
+                TextColor="#f28e8e"
+                Grid.Column="1"
+                Text="After 3 wrong attempts, game will be finished."/>
+        </Grid>
+        </VerticalStackLayout>
+        <Button
+            Command="{Binding StartGameCommand}"
+            Margin="0,30,0,0"
+            FontSize="25"
+            VerticalOptions="End"
+            TextColor="White"
+            FontFamily="Homemade-Sausage"
+            Text="Start Game"
+            CornerRadius="30"
+            BackgroundColor="#6899ef"/>
+
+
+
+    </StackLayout>
+    </ScrollView>
+</ContentPage>
+<!--<christmas
+       Homemade-Sausage
+        Winkle-Regular-->

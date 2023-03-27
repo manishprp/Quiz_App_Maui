@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:MAUI_Assessment_One.ViewModel.QuizgameViewModel"
+             x:Class="MAUI_Assessment_One.QuizgamePage"
+             Padding="16"
+             Title="QuizgamePage">
+    <NavigationPage.TitleView
+        >
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Label
+                VerticalOptions="CenterAndExpand"
+                TextColor="White"
+                FontSize="Large"
+                FontFamily="Homemade-Sausage"
+                Text="Quiz"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+   
+   
+    <ContentPage.BindingContext>
+        <viewModel:QuizgameViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <StackLayout
+            Spacing="25">
+            <VerticalStackLayout
+                Spacing="15"
+                Margin="0,30,0,0">
+                <StackLayout
+                    Orientation="Horizontal">
+                <Label
+                    FontFamily="Winkle-Regular"
+                    HorizontalOptions="StartAndExpand"
+                    FontSize="30"
+                    TextColor="#ff7f4f"
+                    Text="{Binding CurrentQuestion}"/>
+                    <HorizontalStackLayout
+                        Spacing="5"
+                        HorizontalOptions="EndAndExpand">
+                    <Label
+                        FontSize="30"
+                    FontFamily="Winkle-Regular"
+                    
+                    TextColor="#62a0a2"
+                    Text="Points:"/>
+                        <Label
+                            FontFamily="Winkle-Regular"
+                    HorizontalOptions="EndAndExpand"
+                    FontSize="30"
+                    TextColor="#ff7f4f"
+                    Text="{Binding Points}"/>
+                    </HorizontalStackLayout>
+                </StackLayout>
+                <ProgressBar
+                    Progress="{Binding Progress}"
+                    ProgressColor="#62a0a2"/>
+                <Label
+                    TextColor="#473c8b"
+                    FontSize="30"
+                    FontFamily="Homemade-Sausage"
+                    Text="{Binding CurrentQuestionDataModel.Question}"/>
+                <Border
+                    x:Name="OptionOne"
+                    Padding="5"
+                    StrokeShape="RoundRectangle 10">
+                    <RadioButton
+                        IsChecked="{Binding OptionA}"
+                    GroupName="AnswerGroup"
+                    RadioButtonGroup.GroupName="AnswerGroup"
+                    FontSize="30"
+                    
+                    FontFamily="Homemade-Sausage"
+                    Content="{Binding CurrentQuestionDataModel.OptionA}">
+                      <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" >
+                                    <VisualState.Setters>
+                                        <Setter
+                                            Property="TextColor"
+                                            Value="#858585"/>
+
+                                    </VisualState.Setters>
+                                </VisualState>
+                            <VisualState x:Name="Checked">
+                                <VisualState.Setters>
+                                        <Setter
+                                            
+                                            Property="RadioButton.TextColor"
+                                            Value="White"/>
+
+                                        <Setter TargetName="OptionOne"
+                                Property="Border.BackgroundColor"
+                                Value="#62a0a2" />
+                                    
+                                </VisualState.Setters>
+                            </VisualState>
+                                <VisualState x:Name="Unchecked">
+                                    <VisualState.Setters>
+                                        <Setter
+                                            Property="RadioButton.TextColor"
+                                            Value="#858585"/>
+
+                                        <Setter TargetName="OptionOne"
+                                            Property="Border.BackgroundColor"
+                                            Value="White" />
+
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+
+
+                    </RadioButton>
+                </Border>
+                <Border
+                    x:Name="OptionTwo"
+                    Padding="5"
+                    StrokeShape="RoundRectangle 10">
+                    <RadioButton
+                         IsChecked="{Binding OptionB}"
+                        GroupName="AnswerGroup"
+                    RadioButtonGroup.GroupName="AnswerGroup"
+                    FontSize="30"
+                    FontFamily="Homemade-Sausage"
+                    Content="{Binding CurrentQuestionDataModel.OptionB}">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" >
+                                    <VisualState.Setters>
+                                        <Setter
+                                            Property="TextColor"
+                                            Value="#858585"/>
+
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Checked">
+                                    <VisualState.Setters>
+                                        <Setter
+                                            
+                                            Property="RadioButton.TextColor"
+                                            Value="White"/>
+
+                                        <Setter TargetName="OptionTwo"
+                                Property="Border.BackgroundColor"
+                                Value="#62a0a2" />
+
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked">
+                                    <VisualState.Setters>
+                                        <Setter
+                                            Property="RadioButton.TextColor"
+                                            Value="#858585"/>
+
+                                        <Setter TargetName="OptionTwo"
+                                            Property="Border.BackgroundColor"
+                                            Value="White" />
+
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </RadioButton>
+                </Border>
+                <Border
+                    x:Name="OptionThree"
+                    Padding="5"
+                    StrokeShape="RoundRectangle 10">
+                    <RadioButton
+                         IsChecked="{Binding OptionC}"
+                        GroupName="AnswerGroup"
+                    RadioButtonGroup.GroupName="AnswerGroup"
+                    FontSize="30"
+                    FontFamily="Homemade-Sausage"
+                    Content="{Binding CurrentQuestionDataModel.OptionC}">
+
+
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" >
+                                    <VisualState.Setters>
+                                        <Setter
+                                            Property="TextColor"
+                                            Value="#858585"/>
+
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Checked">
+                                    <VisualState.Setters>
+                                        <Setter
+                                            
+                                            Property="RadioButton.TextColor"
+                                            Value="White"/>
+
+                                        <Setter TargetName="OptionThree"
+                                Property="Border.BackgroundColor"
+                                Value="#62a0a2" />
+
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked">
+                                    <VisualState.Setters>
+                                        <Setter
+                                            Property="RadioButton.TextColor"
+                                            Value="#858585"/>
+
+                                        <Setter TargetName="OptionThree"
+                                            Property="Border.BackgroundColor"
+                                            Value="White" />
+
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </RadioButton>
+                </Border>
+                <Border
+                    x:Name="OptionFour"
+                    Padding="5"
+                    StrokeShape="RoundRectangle 10">
+                    <RadioButton
+                         IsChecked="{Binding OptionD}"
+                        GroupName="AnswerGroup"
+                    RadioButtonGroup.GroupName="AnswerGroup"
+                    FontSize="30"
+                    FontFamily="Homemade-Sausage"
+                    Content="{Binding CurrentQuestionDataModel.OptionD}">
+
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" >
+                                    <VisualState.Setters>
+                                        <Setter
+                                            Property="TextColor"
+                                            Value="#858585"/>
+
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Checked">
+                                    <VisualState.Setters>
+                                        <Setter
+                                            
+                                            Property="RadioButton.TextColor"
+                                            Value="White"/>
+
+                                        <Setter TargetName="OptionFour"
+                                Property="Border.BackgroundColor"
+                                Value="#62a0a2" />
+
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked">
+                                    <VisualState.Setters>
+                                        <Setter
+                                            Property="RadioButton.TextColor"
+                                            Value="#858585"/>
+
+                                        <Setter TargetName="OptionFour"
+                                            Property="Border.BackgroundColor"
+                                            Value="White" />
+
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </RadioButton>
+                </Border>
+
+
+            </VerticalStackLayout>
+            <Label
+                IsVisible="{Binding IsErrorVisible}"
+                Margin="0,20,0,0"
+                HorizontalOptions="Center"
+                FontFamily="Homemade-Sausage"
+                FontSize="Medium"
+                TextColor="#cd5555"
+                Text="{Binding Attempts}"/>
+
+            <Button
+                Command="{Binding SubmitAnswerCommand}"
+                Margin="0,80,0,0"
+                VerticalOptions="EndAndExpand"
+                FontSize="Large"
+                Padding="10"
+                CornerRadius="30"
+                FontFamily="Homemade-Sausage"
+                Text="Submit"
+                BackgroundColor="#6899ef"/>
+
+        </StackLayout>
+    </ScrollView>
+   
+</ContentPage>
